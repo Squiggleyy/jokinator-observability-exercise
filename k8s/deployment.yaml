@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-react-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-react-app
+  template:
+    metadata:
+      labels:
+        app: spring-react-app
+    spec:
+      containers:
+        - name: backend
+          image: spring-react-app-backend
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+        - name: frontend
+          image: spring-react-app-frontend
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80

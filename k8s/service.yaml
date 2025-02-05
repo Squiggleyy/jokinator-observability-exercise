@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-react-app-service
+spec:
+  type: NodePort
+  selector:
+    app: spring-react-app
+  ports:
+    - name: frontend
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30000  # Access frontend on Minikube
+    - name: backend
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
