@@ -1,15 +1,15 @@
 # Luke's Flask app
-This is a basic Flask web application that can be used to practice the instrumentation of observability solutions. The app currently only works in minikube, however kustomization templates have been added for future EKS/AKS support.
+This is a basic Java web application (Spring boot + React) that can be used to practice the instrumentation of observability solutions. The app only works in minikube.
 
 **As of 2025, Docker Desktop and Minikube must be installed to proceed with this exercise!**
 
-If you haven't already, clone the repository with "git clone https://github.com/squiggleyy/flask-observability-exercise". Once the repo is available on your local machine, complete the following steps:
+If you haven't already, clone the repository with "git clone https://github.com/squiggleyy/spring-observability-exercise". Once the repo is available on your local machine, complete the following steps:
 
 # Start the app
-1. Navigate to the "~/flask-observability-exercise" directory and run the "deploy-app.sh" script via "sh deploy-app.sh".
-2. You should be prompted for your DockerHub username. Type your username and click enter.
-3. After the script completes, run "kubectl get pods" to confirm that there is a flask-app pod running in the default namespace.
-4. Open the application by visiting "http://localhost:5000" in a browser. If it doesn't load, try incognito mode.
+1. Navigate to the `~/spring-observability-exercise` directory and run the `deploy-app.sh` script via `sh deploy-app.sh`.
+2. After the script completes, run "kubectl get pods" to confirm that there is a `spring-react-app` pod running in the default namespace.
+3. Since nginx dynamically assigns a frontend port, check the URL by running `minikube service spring-react-app-service --url`.
+4. Open the application by visiting `http://localhost:XXXXX` in a browser. If it doesn't load, try incognito mode.
 5. Interact with the web application to see what it does!
 
 *Now, let's get ready to collect telemetry...*
