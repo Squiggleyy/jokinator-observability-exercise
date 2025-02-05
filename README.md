@@ -1,4 +1,4 @@
-# Luke's Flask app
+# Luke's Java app
 This is a basic Java web application (Spring boot + React) that can be used to practice the instrumentation of observability solutions. The app only works in minikube.
 
 **As of 2025, Docker Desktop and Minikube must be installed to proceed with this exercise!**
