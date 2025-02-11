@@ -16,6 +16,17 @@ spec:
         - name: backend
           image: spring-react-app-backend
           imagePullPolicy: IfNotPresent
+          env:
+            - name: JAVA_TOOL_OPTIONS
+              value: "-javaagent:/app/opentelemetry-javaagent.jar"
+            - name: OTEL_SERVICE_NAME
+              value: "spring-react-app"
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "http://observe-agent-forwarder.observe.svc.cluster.local:4318"
+            - name: OTEL_LOG_LEVEL
+              value: "debug"
+            - name: OTEL_RESOURCE_ATTRIBUTES
+              value: "service.name=spring-react-app,env=production"
           ports:
             - containerPort: 8080
         - name: frontend
