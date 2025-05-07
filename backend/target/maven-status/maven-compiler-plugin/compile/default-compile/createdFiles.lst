@@ -1,5 +1,4 @@
 com/example/demo/config/WebConfig.class
 com/example/demo/DemoApplication.class
-com/example/demo/controllers/HelloController.class
 com/example/demo/config/WebConfig$1.class
 com/example/demo/controllers/JokeController.class

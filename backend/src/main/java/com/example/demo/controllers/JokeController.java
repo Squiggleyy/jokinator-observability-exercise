@@ -13,7 +13,8 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
+
 public class JokeController {
 
     private static final Logger logger = LoggerFactory.getLogger(JokeController.class);
@@ -30,15 +31,3 @@ public class JokeController {
         return joke;
     }
 }
-
-// @RestController
-// @RequestMapping("/api")
-// public class JokeController {
-
-//     @GetMapping("/joke")
-//     public Map<String, Object> getJoke() {
-//         RestTemplate restTemplate = new RestTemplate();
-//         String jokeApiUrl = "https://official-joke-api.appspot.com/random_joke";
-//         return restTemplate.getForObject(jokeApiUrl, Map.class);
-//     }
-// }
