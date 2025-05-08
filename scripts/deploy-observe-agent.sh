@@ -30,7 +30,7 @@ kubectl label secret agent-credentials -n observe \
 
 helm install observe-agent observe/agent -n observe \
 --set observe.collectionEndpoint.value="https://100112502756.collect.observeinc.com/" \
---set cluster.name="jokinator2" \
+--set cluster.name="jokinator" \
 --set node.containers.logs.enabled="true" \
 --set application.prometheusScrape.enabled="false" \
 --set node.forwarder.enabled="true"

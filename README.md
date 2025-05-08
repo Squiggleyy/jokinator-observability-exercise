@@ -1,13 +1,13 @@
 # Luke's Jokinator 5000
-This is a basic Java web application (Spring boot + React) that can be used to practice the instrumentation of observability solutions. The app only works in minikube.
+This is a basic Java web application (Spring boot + React) that can be used to practice the instrumentation of observability solutions. The app only works in minikube, and it has only been tested on MacOS.
 
 **As of 2025, Docker Desktop and Minikube must be installed to proceed with this exercise!**
 
-If you haven't already, clone the repository with "git clone https://github.com/squiggleyy/spring-observability-exercise". Once the repo is available on your local machine, complete the following steps:
+If you haven't already, clone the repository with "git clone https://github.com/squiggleyy/jokinator-observability-exercise". Using an IDE is stongly encouraged. Once the repo is available on your local machine, complete the following steps:
 
 # Start the app
-1. Navigate to the `~/spring-observability-exercise` directory and run the `deploy-app.sh` script via `sh scripts/deploy-app.sh`.
-2. This should take a couple of minutes. After the app deploys, it should start a tunnel for MacOS. **Please keep this tunnel running to access the app in-browser.**
+1. Navigate to the `~/jokinator-observability-exercise` directory and run the `deploy-app.sh` script via `sh scripts/deploy-app.sh`.
+2. This should take a couple of minutes. After the app deploys, it should should request your password to start a tunnel. **Please keep this tunnel running to access the app in-browser.**
 3. In a new terminal window, run `kubectl get pods` to confirm that there are 2 pods running in the default namespace.
 4. Open the application by visiting `http://127.0.0.1/` in a browser.
 5. Interact with the web application to see what it does!
