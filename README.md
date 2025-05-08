@@ -37,7 +37,7 @@ If you haven't already, clone the repository with "git clone https://github.com/
 # Configure traces
 18. Follow the instructions listed here: https://docs.observeinc.com/en/latest/content/observe-agent/ConfigureApplicationInstrumentation.html
 
-# [WIP] View your application traces in Observe!
+# View your application traces in Observe!
 19. Click "Traces" and take a look at your "service entry point" spans. In the "Operation" column, you'll see the http GET requests from clicking the buttons or refreshing the page.
 20. Pick an entry point span and click "View trace." In this case, it is normal to see only 1 span for the trace. Read through the "Fields & attributes" tab.
 21. Click the "Logs" tab. Select "Kubernetes Logs" and view those logs for the cluster, pod, and namespace right below the distributed trace! This demonstrates automatic correlation of infrastructure, logs, and traces via k8s resource attributes.
